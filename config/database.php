@@ -95,29 +95,7 @@ return [
 
     ],
 
-    /*
-    |--------------------------------------------------------------------------
-    | Migration Repository Table
-    |--------------------------------------------------------------------------
-    |
-    | This table keeps track of all the migrations that have already run for
-    | your application. Using this information, we can determine which of
-    | the migrations on disk haven't actually been run in the database.
-    |
-    */
-
     'migrations' => 'migrations',
-
-    /*
-    |--------------------------------------------------------------------------
-    | Redis Databases
-    |--------------------------------------------------------------------------
-    |
-    | Redis is an open source, fast, and advanced key-value store that also
-    | provides a richer body of commands than a typical key-value system
-    | such as APC or Memcached. Laravel makes it easy to dig right in.
-    |
-    */
 
     'redis' => [
 
@@ -140,8 +118,8 @@ return [
         'cache' => [
             'url' => env('REDIS_URL'),
             'host' => env('AZURE_REDIS_HOST', '127.0.0.1'),
-            'username' => env('AZURE_REDIS_PASSWORD'),
-            'password' => env('REDIS_PASSWORD'),
+            'username' => env('REDIS_USERNAME'),
+            'password' => env('AZURE_REDIS_PASSWORD'),
             'port' => env('AZURE_REDIS_PORT', '6379'),
             'database' => env('AZURE_REDIS_DATABASE', '1'),
             'scheme' => 'tls',
